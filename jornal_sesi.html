@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jornal SESI — Brasil em Alerta: A Dependência Nacional de Fertilizantes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --c-ink: #0f0f0f;
+    --c-ink-mid: #3a3a3a;
+    --c-ink-muted: #6b6b6b;
+    --c-ink-faint: #a0a0a0;
+    --c-paper: #faf8f3;
+    --c-paper-warm: #f2efe8;
+    --c-paper-mid: #e8e4da;
+    --c-rule: #c8c2b4;
+    --c-accent: #b91c1c;
+    --c-accent-dark: #7f1d1d;
+    --c-accent-light: #fef2f2;
+    --c-blue-dark: #1e3a5f;
+    --c-blue-mid: #2563eb;
+    --c-blue-light: #eff6ff;
+    --c-amber: #92400e;
+    --c-amber-light: #fffbeb;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--c-paper);
+    color: var(--c-ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── HEADER ─── */
+  .site-header {
+    background: var(--c-ink);
+    color: var(--c-paper);
+    text-align: center;
+    padding: 0;
+    border-bottom: 4px solid var(--c-accent);
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 48px;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  .header-date {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #9ca3af;
+    letter-spacing: 1px;
+  }
+
+  .header-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    background: rgba(185,28,28,0.15);
+    padding: 3px 10px;
+    border-radius: 3px;
+  }
+
+  .header-logo-block {
+    padding: 28px 48px 24px;
+  }
+
+  .logo-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #9ca3af;
+    margin-bottom: 8px;
+  }
+
+  .logo-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+
+  .logo-name span {
+    color: var(--c-accent);
+  }
+
+  .logo-tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #6b7280;
+  }
+
+  /* ─── NAV ─── */
+  .site-nav {
+    background: var(--c-paper-warm);
+    border-bottom: 1px solid var(--c-rule);
+    border-top: 1px solid var(--c-rule);
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+  }
+
+  .nav-inner a {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--c-ink-mid);
+    text-decoration: none;
+    padding: 13px 20px;
+    border-right: 1px solid var(--c-rule);
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .nav-inner a:hover, .nav-inner a.active {
+    background: var(--c-accent);
+    color: #fff;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: var(--c-ink);
+    color: var(--c-paper);
+    padding: 64px 48px 56px;
+    max-width: 100%;
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .hero-kicker {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero-kicker::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: var(--c-accent);
+  }
+
+  .hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -1px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  .hero-deck {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.65;
+    color: #d1d5db;
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+
+  .hero-byline {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #6b7280;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-byline strong {
+    color: #9ca3af;
+    font-weight: 500;
+  }
+
+  .hero-sidebar {
+    border-left: 1px solid #2a2a2a;
+    padding-left: 40px;
+  }
+
+  .hero-sidebar-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6b7280;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  .stat-item {
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #1f1f1f;
+  }
+
+  .stat-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--c-accent);
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #9ca3af;
+    line-height: 1.4;
+  }
+
+  /* ─── BREAKING BANNER ─── */
+  .breaking {
+    background: var(--c-accent);
+    color: white;
+    padding: 12px 48px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .breaking-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: white;
+    color: var(--c-accent);
+    padding: 3px 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+
+  .breaking-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  /* ─── MAIN LAYOUT ─── */
+  .main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 48px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 56px;
+    padding-top: 56px;
+    padding-bottom: 80px;
+  }
+
+  /* ─── SECTION LABELS ─── */
+  .section-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--c-accent);
+    display: inline-block;
+  }
+
+  /* ─── ARTICLE SECTIONS ─── */
+  .article-section {
+    margin-bottom: 52px;
+    padding-bottom: 52px;
+    border-bottom: 1px solid var(--c-rule);
+  }
+
+  .article-section:last-child { border-bottom: none; }
+
+  .section-h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--c-ink);
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .article-body p {
+    margin-bottom: 20px;
+    color: var(--c-ink-mid);
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .article-body p:last-child { margin-bottom: 0; }
+
+  /* ─── PULLQUOTE ─── */
+  .pullquote {
+    border-top: 3px solid var(--c-ink);
+    border-bottom: 1px solid var(--c-rule);
+    padding: 28px 0 24px;
+    margin: 36px 0;
+  }
+
+  .pullquote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--c-ink);
+    margin: 0 0 12px !important;
+  }
+
+  .pullquote cite {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--c-ink-muted);
+    font-style: normal;
+  }
+
+  /* ─── DATA BOXES ─── */
+  .data-box {
+    background: var(--c-blue-light);
+    border-left: 4px solid var(--c-blue-mid);
+    padding: 24px 28px;
+    margin: 32px 0;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .data-box-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--c-blue-dark);
+    margin-bottom: 16px;
+  }
+
+  .data-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0;
+    border-bottom: 1px solid #bfdbfe;
+  }
+
+  .data-row:last-child { border-bottom: none; }
+
+  .data-row-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--c-blue-dark);
+  }
+
+  .data-row-value {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--c-blue-dark);
+  }
+
+  /* ─── ALERT BOX ─── */
+  .alert-box {
+    background: var(--c-accent-light);
+    border-left: 4px solid var(--c-accent);
+    padding: 24px 28px;
+    margin: 32px 0;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .alert-box-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--c-accent-dark);
+    margin-bottom: 12px;
+  }
+
+  .alert-box p {
+    font-size: 15px;
+    color: var(--c-accent-dark);
+    margin: 0 !important;
+    line-height: 1.6;
+  }
+
+  /* ─── PLAN ITEMS ─── */
+  .plan-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  .plan-card {
+    background: var(--c-paper-warm);
+    border: 1px solid var(--c-rule);
+    padding: 20px;
+    border-radius: 4px;
+  }
+
+  .plan-card.positive { border-top: 3px solid #16a34a; }
+  .plan-card.negative { border-top: 3px solid var(--c-accent); }
+
+  .plan-card-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .plan-card.positive .plan-card-label { color: #16a34a; }
+  .plan-card.negative .plan-card-label { color: var(--c-accent); }
+
+  .plan-card h4 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--c-ink);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .plan-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--c-ink-muted);
+    line-height: 1.5;
+    margin: 0 !important;
+  }
+
+  /* ─── TIMELINE ─── */
+  .timeline {
+    margin: 32px 0;
+    position: relative;
+    padding-left: 28px;
+    border-left: 2px solid var(--c-rule);
+  }
+
+  .timeline-item {
+    margin-bottom: 28px;
+    position: relative;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -36px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--c-accent);
+    border: 2px solid var(--c-paper);
+    outline: 2px solid var(--c-accent);
+  }
+
+  .timeline-year {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--c-accent);
+    margin-bottom: 4px;
+  }
+
+  .timeline-text {
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    color: var(--c-ink-mid);
+    line-height: 1.6;
+  }
+
+  /* ─── SIDEBAR ─── */
+  .sidebar { }
+
+  .sidebar-widget {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--c-rule);
+  }
+
+  .sidebar-widget:last-child { border-bottom: none; }
+
+  .sidebar-widget-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--c-ink);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--c-ink);
+  }
+
+  .mercantilismo-block {
+    background: var(--c-ink);
+    color: var(--c-paper);
+    padding: 24px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+  }
+
+  .mercantilismo-block h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+    line-height: 1.25;
+  }
+
+  .mercantilismo-block p {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #9ca3af;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .principle-item {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--c-rule);
+  }
+
+  .principle-item:last-child { border-bottom: none; }
+
+  .principle-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--c-paper-mid);
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+
+  .principle-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--c-ink);
+    margin-bottom: 4px;
+  }
+
+  .principle-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--c-ink-muted);
+    line-height: 1.5;
+  }
+
+  .bar-chart-wrap { margin: 20px 0; }
+
+  .bar-item { margin-bottom: 14px; }
+
+  .bar-meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--c-ink-mid);
+    margin-bottom: 5px;
+  }
+
+  .bar-meta strong { font-weight: 600; }
+
+  .bar-track {
+    height: 6px;
+    background: var(--c-paper-mid);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--c-accent);
+  }
+
+  /* ─── FOOTER ─── */
+  .site-footer {
+    background: var(--c-ink);
+    color: #9ca3af;
+    padding: 40px 48px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 8px;
+  }
+
+  .footer-logo span { color: var(--c-accent); }
+
+  .footer-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-sidebar { border-left: none; padding-left: 0; border-top: 1px solid #2a2a2a; padding-top: 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .hero-sidebar-title { grid-column: 1/-1; }
+    .stat-item { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .main-content { grid-template-columns: 1fr; padding: 32px 24px 60px; gap: 40px; }
+    .hero { padding: 40px 24px; }
+    .header-top { padding: 10px 24px; }
+    .logo-name { font-size: 44px; }
+    .hero-headline { font-size: 34px; }
+    .plan-grid { grid-template-columns: 1fr; }
+    .breaking { padding: 12px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-top">
+    <span class="header-date">Domingo, 19 de abril de 2026</span>
+    <span class="header-tag">Edição Especial — Economia & Agronegócio</span>
+  </div>
+  <div class="header-logo-block">
+    <p class="logo-eyebrow">Serviço Social da Indústria</p>
+    <h1 class="logo-name">Jornal <span>SESI</span></h1>
+    <p class="logo-tagline">Informação com responsabilidade social</p>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="#historia" class="active">Contexto histórico</a>
+    <a href="#geopolitica">Geopolítica</a>
+    <a href="#impacto">Impacto no campo</a>
+    <a href="#plano">Plano do governo</a>
+    <a href="#mercantilismo">Mercantilismo</a>
+    <a href="#conclusao">Análise</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-main">
+      <p class="hero-kicker">Investigação especial</p>
+      <h2 class="hero-headline">Brasil em Alerta: Como a Dependência de Fertilizantes Ameaça a Maior Potência Agrícola do Mundo</h2>
+      <p class="hero-deck">O país que alimenta o planeta não consegue plantar sem depender de outros. Mais de 88% de todos os fertilizantes usados no Brasil vêm do exterior — e o maior fornecedor é a Rússia, em meio a uma guerra.</p>
+      <p class="hero-byline">Por <strong>Redação Jornal SESI</strong> · Economia &amp; Agronegócio · 19 abr. 2026</p>
+    </div>
+    <aside class="hero-sidebar">
+      <p class="hero-sidebar-title">Números do problema</p>
+      <div class="stat-item">
+        <div class="stat-number">88%</div>
+        <div class="stat-label">dos fertilizantes consumidos no Brasil são importados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">US$ 13,4bi</div>
+        <div class="stat-label">gastos em 2025 com importação de adubos — maior gasto do país</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">96%</div>
+        <div class="stat-label">do potássio consumido vem de fora — a maior dependência</div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- BREAKING -->
+<div class="breaking">
+  <span class="breaking-label">Urgente</span>
+  <span class="breaking-text">Em 2022, a guerra Rússia-Ucrânia fez o preço dos fertilizantes no porto brasileiro dobrar, chegando a US$ 1.200 por tonelada. O risco pode se repetir.</span>
+</div>
+
+<!-- MAIN -->
+<div class="main-content">
+  <main>
+
+    <!-- SEÇÃO 1 -->
+    <article class="article-section" id="historia">
+      <p class="section-label">Contexto histórico</p>
+      <h2 class="section-h2">Como o Brasil se tornou refém de um insumo que não produz</h2>
+      <div class="article-body">
+        <p>O Brasil é uma das maiores potências agrícolas do planeta. Somos líderes mundiais na exportação de soja, milho, café e carne bovina. O agronegócio responde por cerca de 7% do Produto Interno Bruto nacional — mais de R$ 880 bilhões — e por 48% de tudo que o país exporta. Mas há uma contradição profunda escondida por trás dessa grandeza.</p>
+        <p>Para plantar toda essa riqueza, o Brasil depende de insumos que não consegue produzir em quantidade suficiente. Os fertilizantes — compostos de nitrogênio, fósforo e potássio — são o combustível da agricultura moderna. Sem eles, a produtividade do campo despenca. E mais de 88% de tudo que o Brasil usa nessa área vem de fora.</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">Décadas de 1950–70</div>
+            <div class="timeline-text">A <strong>Revolução Verde</strong> transforma a agricultura mundial com o uso massivo de fertilizantes sintéticos. O Brasil adota o modelo com entusiasmo, triplicando sua produtividade — mas nunca investe em produção doméstica do insumo.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Décadas de 1980–2000</div>
+            <div class="timeline-text">O Brasil consolida sua posição como potência exportadora de commodities. A dependência de fertilizantes importados cresce junto com a produção, mas nunca chega ao topo da agenda política.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2022</div>
+            <div class="timeline-text">A guerra entre Rússia e Ucrânia expõe a fragilidade. Preços dos fertilizantes dobram nos portos brasileiros. O governo reconhece o problema e lança o <strong>Plano Nacional de Fertilizantes</strong>.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-text">O Brasil gasta <strong>US$ 13,4 bilhões</strong> em importação de adubos e fertilizantes — o maior gasto de importação do país, à frente até de petróleo e medicamentos. A dependência chegou a 88,2%.</div>
+          </div>
+        </div>
+
+        <p>O resultado de décadas de escolhas — e de escolhas que não foram feitas — é que o Brasil hoje é o quarto maior consumidor de fertilizantes do mundo, responsável por 8% do consumo global. E quase nada disso é produzido em território nacional.</p>
+      </div>
+    </article>
+
+    <!-- SEÇÃO 2 -->
+    <article class="article-section" id="geopolitica">
+      <p class="section-label">Geopolítica</p>
+      <h2 class="section-h2">O risco russo: quando o fornecedor é um país em guerra</h2>
+      <div class="article-body">
+        <p>Para entender o tamanho do problema, é preciso saber de onde vêm esses fertilizantes. A Rússia é o maior fornecedor individual do Brasil, respondendo por cerca de 26% das importações de fertilizantes nitrogenados. China e Bielorrússia completam o pódio — e, somados, quase 45% de tudo que o Brasil importa vem de países considerados politicamente instáveis ou com maior risco geopolítico.</p>
+
+        <div class="alert-box">
+          <div class="alert-box-title">Alerta de segurança estratégica</div>
+          <p>Em 2022, com o início da guerra entre Rússia e Ucrânia, fertilizantes que custavam entre US$ 500 e US$ 600 por tonelada no porto brasileiro chegaram a ser negociados entre US$ 1.200 e US$ 1.300 por tonelada. O produtor rural pagou a conta — e o consumidor também, em forma de alimentos mais caros nos supermercados.</p>
+        </div>
+
+        <p>A Rússia suspendeu temporariamente o envio de nitrato de amônio. A China restringiu o fosfato para proteger seus agricultores internos. Cada decisão tomada em Moscou ou Pequim reverbera diretamente no preço dos alimentos que chegam à mesa dos brasileiros.</p>
+
+        <div class="pullquote">
+          <p>"Vai depender de quanto tempo essa guerra vai durar. Na medida em que ela se torna crônica, podemos ter um problema maior — aumento do preço do petróleo, impacto nos fertilizantes. O Brasil não tem como substituir essa oferta prontamente."</p>
+          <cite>— Prof. Dr. Hugo Eduardo Meza Pinto, economista e professor universitário</cite>
+        </div>
+
+        <p>As sanções logísticas às empresas russas também encarecem o transporte do produto. Especialistas alertam que as limitações no fornecimento ao Brasil representam um risco real que as empresas do setor já estão considerando nas negociações e reajustes de preço.</p>
+      </div>
+    </article>
+
+    <!-- SEÇÃO 3 -->
+    <article class="article-section" id="impacto">
+      <p class="section-label">Impacto no campo e na economia</p>
+      <h2 class="section-h2">Do adubo ao supermercado: como a dependência afeta cada brasileiro</h2>
+      <div class="article-body">
+        <p>O fertilizante pode parecer distante da vida cotidiana, mas seu impacto chega diretamente ao bolso do consumidor. Esse insumo representa até 40% do custo de produção de culturas como soja e milho. Quando o preço sobe lá fora, o agricultor aqui dentro repassa ao próximo da cadeia — e assim por diante, até o preço final no caixa do supermercado.</p>
+        <p>O agronegócio é responsável por 48% das exportações totais do Brasil. Qualquer instabilidade no fornecimento de fertilizantes ameaça diretamente essa cadeia. É como um motor potente que depende de uma peça importada para funcionar: se a peça falta ou encarece, o motor inteiro perde rendimento.</p>
+
+        <div class="data-box">
+          <div class="data-box-title">Maiores importações do Brasil em 2025 — valor FOB (US$)</div>
+          <div class="data-row">
+            <span class="data-row-label">1. Adubos e fertilizantes</span>
+            <span class="data-row-value">US$ 13,4 bi</span>
+          </div>
+          <div class="data-row">
+            <span class="data-row-label">2. Óleos combustíveis de petróleo</span>
+            <span class="data-row-value">US$ 12,1 bi</span>
+          </div>
+          <div class="data-row">
+            <span class="data-row-label">3. Demais produtos industriais</span>
+            <span class="data-row-value">US$ 8,9 bi</span>
+          </div>
+          <div class="data-row">
+            <span class="data-row-label">4. Medicamentos e farmacêuticos</span>
+            <span class="data-row-value">US$ 7,3 bi</span>
+          </div>
+          <div class="data-row">
+            <span class="data-row-label">5. Válvulas e tubos termiônicos</span>
+            <span class="data-row-value">US$ 7,1 bi</span>
+          </div>
+        </div>
+
+        <p>Além do impacto direto no bolso, a dependência compromete a segurança alimentar nacional. Fertilizantes são insumos estratégicos — sem eles, não há como manter o volume e a qualidade da produção agrícola que alimenta tanto o mercado interno quanto as exportações que sustentam o saldo comercial brasileiro.</p>
+      </div>
+    </article>
+
+    <!-- SEÇÃO 4 -->
+    <article class="article-section" id="plano">
+      <p class="section-label">A resposta do governo</p>
+      <h2 class="section-h2">O Plano Nacional de Fertilizantes: ambição de 2050, obstáculos de hoje</h2>
+      <div class="article-body">
+        <p>Em março de 2022, no auge da crise gerada pela guerra na Ucrânia, o Governo Federal lançou o Plano Nacional de Fertilizantes — o PNF 2050. A meta é ambiciosa: reduzir a dependência de fertilizantes importados dos atuais 88% para 45% até 2050, mesmo que a demanda dobre nesse período.</p>
+        <p>O plano propõe uma série de ações coordenadas entre governo e iniciativa privada. A reativação e modernização de fábricas nacionais visa produzir 3,2 milhões de toneladas de nitrogenados por ano. O incentivo a bioinsumos e fertilizantes orgânicos prevê aumento de oferta de até 500%. A melhoria logística mira redução de 50% nos custos de transporte até 2050, e a correção da "tarifa inversa" tributária busca nivelar a competição entre o produto nacional e o importado.</p>
+
+        <div class="plan-grid">
+          <div class="plan-card positive">
+            <div class="plan-card-label">Ponto positivo</div>
+            <h4>Meta concreta de redução</h4>
+            <p>Reduzir de 88% para 45% de dependência é um objetivo claro e mensurável, que dá direção aos investimentos públicos e privados.</p>
+          </div>
+          <div class="plan-card positive">
+            <div class="plan-card-label">Ponto positivo</div>
+            <h4>Fomento a bioinsumos</h4>
+            <p>O incentivo a fertilizantes orgânicos e organominerais alinha o agronegócio brasileiro às metas de sustentabilidade e ESG globais.</p>
+          </div>
+          <div class="plan-card positive">
+            <div class="plan-card-label">Ponto positivo</div>
+            <h4>Exploração de jazidas nacionais</h4>
+            <p>O Brasil possui reservas de fósforo e potássio ainda pouco exploradas — o plano incentiva sua pesquisa e extração sustentável.</p>
+          </div>
+          <div class="plan-card negative">
+            <div class="plan-card-label">Ponto negativo</div>
+            <h4>Execução lenta</h4>
+            <p>Especialistas apontam falta de vontade política e investimentos insuficientes. O plano avança aquém do esperado desde seu lançamento.</p>
+          </div>
+          <div class="plan-card negative">
+            <div class="plan-card-label">Ponto negativo</div>
+            <h4>Custo do gás natural</h4>
+            <p>Essencial para fertilizantes nitrogenados, o gás natural custa até 7 vezes mais no Brasil do que nos EUA — tornando a produção local pouco competitiva.</p>
+          </div>
+          <div class="plan-card negative">
+            <div class="plan-card-label">Ponto negativo</div>
+            <h4>Obstáculos ambientais e jurídicos</h4>
+            <p>A mineração de potássio na região amazônica enfrenta barreiras legais e ambientais complexas que ainda precisam ser resolvidas.</p>
+          </div>
+        </div>
+
+        <p>O maior desafio estrutural permanece sendo a chamada "tarifa inversa": um conjunto de impostos que torna, paradoxalmente, o fertilizante fabricado dentro do Brasil mais caro do que o produto importado. Enquanto essa distorção existir, a indústria nacional terá dificuldade de se firmar no mercado.</p>
+      </div>
+    </article>
+
+    <!-- SEÇÃO 5 -->
+    <article class="article-section" id="conclusao">
+      <p class="section-label">Análise editorial</p>
+      <h2 class="section-h2">Um problema de hoje com raízes em séculos de teoria econômica</h2>
+      <div class="article-body">
+        <p>O caso dos fertilizantes é um espelho da nossa história econômica. O Brasil cresceu, tornou-se uma potência agrícola, mas deixou de construir a base que sustenta esse crescimento. Importamos o insumo mais barato disponível no mercado mundial — e, com isso, nos tornamos reféns de crises que não controlamos.</p>
+        <p>O Plano Nacional de Fertilizantes existe. A consciência do problema existe. O que ainda está sendo construído é a coragem política e o volume de investimento necessários para transformar intenção em realidade. Enquanto isso, a Rússia continua sendo nosso maior fornecedor, a guerra continua, e os preços continuam imprevisíveis.</p>
+
+        <div class="pullquote">
+          <p>"O Brasil não aprendeu com crises passadas. Mantemos os mesmos gargalos que impedem as fábricas nacionais de competir com o produto importado."</p>
+          <cite>— Análise de especialistas citados pela Gazeta do Povo, abr. 2026</cite>
+        </div>
+
+        <p>A lição que a história — e o mercantilismo — nos dá é clara: uma nação que depende de outros para produzir seus alimentos não é soberana. O Brasil tem os recursos, o conhecimento e a tecnologia para mudar esse cenário. Falta transformar o diagnóstico em ação.</p>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-widget" id="mercantilismo">
+      <p class="sidebar-widget-title">Mercantilismo e o PNF</p>
+      <div class="mercantilismo-block">
+        <h4>O que os economistas do séc. XVII diriam sobre o Brasil hoje?</h4>
+        <p>A doutrina mercantilista, dominante entre os séculos XVI e XVIII, ensinava que uma nação forte exporta ao máximo e importa apenas o essencial. A dependência brasileira de fertilizantes seria, para eles, uma contradição grave.</p>
+      </div>
+
+      <div class="principle-item">
+        <div class="principle-number">01</div>
+        <div class="principle-title">Balança comercial favorável</div>
+        <div class="principle-desc">O PNF busca reduzir os US$ 13,4 bi gastos em importações, mantendo o dinheiro circulando dentro do Brasil.</div>
+      </div>
+      <div class="principle-item">
+        <div class="principle-number">02</div>
+        <div class="principle-title">Autossuficiência como soberania</div>
+        <div class="principle-desc">Mercantilistas viam a dependência externa como vulnerabilidade estratégica — exatamente o que o Brasil enfrenta hoje.</div>
+      </div>
+      <div class="principle-item">
+        <div class="principle-number">03</div>
+        <div class="principle-title">Intervenção estatal ativa</div>
+        <div class="principle-desc">O forte papel do governo na economia era marca do mercantilismo. O PNF propõe coordenação semelhante entre Estado e setor privado.</div>
+      </div>
+      <div class="principle-item">
+        <div class="principle-number">04</div>
+        <div class="principle-title">Acúmulo de riqueza interna</div>
+        <div class="principle-desc">Produzir fertilizantes no Brasil geraria empregos, renda e impostos — mantendo a riqueza dentro do país em vez de enviá-la ao exterior.</div>
+      </div>
+    </div>
+
+    <div class="sidebar-widget">
+      <p class="sidebar-widget-title">De onde vêm os fertilizantes</p>
+      <div class="bar-chart-wrap">
+        <div class="bar-item">
+          <div class="bar-meta"><span>Rússia</span><strong>~26%</strong></div>
+          <div class="bar-track"><div class="bar-fill" style="width:26%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-meta"><span>Canadá (potássio)</span><strong>~20%</strong></div>
+          <div class="bar-track"><div class="bar-fill" style="width:20%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-meta"><span>China</span><strong>~16%</strong></div>
+          <div class="bar-track"><div class="bar-fill" style="width:16%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-meta"><span>Marrocos</span><strong>~12%</strong></div>
+          <div class="bar-track"><div class="bar-fill" style="width:12%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-meta"><span>Bielorrússia</span><strong>~10%</strong></div>
+          <div class="bar-track"><div class="bar-fill" style="width:10%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-meta"><span>Demais países</span><strong>~16%</strong></div>
+          <div class="bar-track"><div class="bar-fill" style="width:16%; background:#c8c2b4"></div></div>
+        </div>
+      </div>
+      <p style="font-family:'Inter',sans-serif;font-size:11px;color:#a0a0a0;margin-top:10px;line-height:1.4;">Fonte: ANDA / Agroadvance. Dados aproximados — variam por tipo de fertilizante (N, P, K).</p>
+    </div>
+
+    <div class="sidebar-widget">
+      <p class="sidebar-widget-title">Meta do PNF 2050</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div style="text-align:center;background:#faf8f3;border:1px solid #c8c2b4;padding:18px 12px;border-radius:4px;">
+          <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:#b91c1c;">88%</div>
+          <div style="font-family:'Inter',sans-serif;font-size:11px;color:#6b6b6b;margin-top:4px;">dependência atual</div>
+        </div>
+        <div style="text-align:center;background:#faf8f3;border:1px solid #c8c2b4;padding:18px 12px;border-radius:4px;">
+          <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:#16a34a;">45%</div>
+          <div style="font-family:'Inter',sans-serif;font-size:11px;color:#6b6b6b;margin-top:4px;">meta para 2050</div>
+        </div>
+      </div>
+      <p style="font-family:'Inter',sans-serif;font-size:12px;color:#6b6b6b;margin-top:14px;line-height:1.5;">O plano prevê alcançar essa redução mesmo com a demanda por fertilizantes dobrando até 2050.</p>
+    </div>
+
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logo">Jornal <span>SESI</span></div>
+  <p class="footer-text">Trabalho acadêmico produzido para a disciplina de História. Conteúdo baseado em pesquisa sobre o Plano Nacional de Fertilizantes (PNF 2050) e suas relações com conceitos do mercantilismo clássico.<br><br>Fontes: Governo Federal / gov.br · ANDA · CNN Brasil · Gazeta do Povo · Fazcomex · IBGE / XP</p>
+</footer>
+
+<script>
+  const links = document.querySelectorAll('.nav-inner a');
+  links.forEach(link => {
+    link.addEventListener('click', function() {
+      links.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        links.forEach(l => {
+          l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.article-section[id], aside[id]').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
